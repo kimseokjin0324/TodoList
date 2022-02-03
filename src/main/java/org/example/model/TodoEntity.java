@@ -1,4 +1,4 @@
-package model;
+package org.example.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,10 +15,13 @@ public class TodoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)     //-자동생성하고 Identity : 데이터베이스에 위임
     private Long id;
+
     @Column(nullable = false)
     private String title;
+
     @Column(name = "todoOrder",nullable = false)
     private Long order;
+
     @Column(nullable = false)
     private Boolean completed;
 }
